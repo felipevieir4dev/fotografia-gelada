@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161616;
+    padding: 20px;
+}
+
+.logo {
+    font-family: 'Concert One', sans-serif;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.login-btn {
+    background-color: #161616;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
