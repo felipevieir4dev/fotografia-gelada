@@ -10,6 +10,7 @@
     font-family: 'Concert One', sans-serif;
     color: #FFFFFF;
     font-size: 24px;
+    font-weight: bolder;
 }
 
 .login-btn {
@@ -18,4 +19,6 @@
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    font-weight: bolder;
 }
+

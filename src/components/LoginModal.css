@@ -13,13 +13,17 @@
 .modal {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     text-align: left;
-    width: 300px;
+    width: 350px;
 }
 
 .modal-actions {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+input, button {
+    border-radius: 10px;
 }

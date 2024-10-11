@@ -1,34 +1,61 @@
+/* Grid da galeria */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
+/* Container de cada imagem */
 .image-container {
-    width: 300px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    /* Organiza os itens (imagem, botões) em coluna */
+    align-items: center;
+    width: 100%;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .actions {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
 }
 
 .like-icon {
     cursor: pointer;
-    font-size: 24px;
-    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-left:10px ;
 }
 
-.like-icon.liked {
-    color: #C60E0E;
+.comment-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+}
+
+.comment-btn img {
+    margin-right: 5px;
+}
+
+.actions img {
+    width: 24px;
+    height: 24px;
+}
+
+.liked img {
+    filter: hue-rotate(0deg) brightness(1.5);
 }
