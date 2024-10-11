@@ -24,6 +24,20 @@
     margin-top: 20px;
 }
 
+input {
+    margin-top: 3%;
+    width: 100%;
+}
 input, button {
     border-radius: 10px;
+}
+
+#entrar {
+    background-color:#161616;
+    color:#fff
+}
+ 
+button {
+    width: 50%;
+    
 }

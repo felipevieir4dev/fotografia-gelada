@@ -32,7 +32,7 @@ const LoginModal = ({ onClose, onLoginSuccess }) => {
                 />
                 <div className="modal-actions">
                     <button onClick={onClose}>Cancelar</button>
-                    <button onClick={handleLogin}>Entrar</button>
+                    <button id='entrar' onClick={handleLogin}>Entrar</button>
                 </div>
             </div>
         </div>

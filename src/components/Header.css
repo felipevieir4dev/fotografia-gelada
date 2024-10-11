@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #161616;
-    padding: 20px;
+    padding: 10px;
 }
 
 .logo {
@@ -20,5 +20,6 @@
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bolder;
+    
 }
 
