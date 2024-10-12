@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ImageGallery from './components/ImageGallery';
 import LoginModal from './components/LoginModal';
-
+import './App.css';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
