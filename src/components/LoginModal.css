@@ -15,7 +15,7 @@
     padding: 20px;
     border-radius: 20px;
     text-align: left;
-    width: 350px;
+    width: 550px;
 }
 
 .modal-actions {
@@ -27,9 +27,10 @@
 input {
     margin-top: 3%;
     width: 100%;
+    padding: 3%;
 }
 input, button {
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 #entrar {
@@ -37,7 +38,8 @@ input, button {
     color:#fff
 }
  
-button {
+#entrar,#cancelar {
     width: 50%;
+    padding: 3%;
     
 }

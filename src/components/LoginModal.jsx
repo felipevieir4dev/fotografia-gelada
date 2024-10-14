@@ -31,7 +31,7 @@ const LoginModal = ({ onClose, onLoginSuccess }) => {
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <div className="modal-actions">
-                    <button onClick={onClose}>Cancelar</button>
+                    <button id='cancelar' onClick={onClose}>Cancelar</button>
                     <button id='entrar' onClick={handleLogin}>Entrar</button>
                 </div>
             </div>
