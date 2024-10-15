@@ -6,7 +6,16 @@ const LoginModal = ({ onClose, onLoginSuccess }) => {
     const [password, setPassword] = useState('');
 
     const handleLogin = () => {
-        // Aqui você pode fazer a validação real de login
+        if (!email || !email.includes('@') || !email.includes('.')) {
+            alert('Por favor, insira um email válido.');
+            return;
+        }
+
+        if (password.length < 6) {
+            alert('A senha deve ter pelo menos 6 caracteres.');
+            return;
+        }
+
         if (email === 'user@example.com' && password === 'password') {
             onLoginSuccess();
         } else {
