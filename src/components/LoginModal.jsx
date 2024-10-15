@@ -25,7 +25,7 @@ const LoginModal = ({ onClose, onLoginSuccess }) => {
 
     return (
         <div className="modal-backdrop">
-            <div className="modal">
+            <div className="modal-login">
                 <h2>Login</h2>
                 <input
                     type="email"
