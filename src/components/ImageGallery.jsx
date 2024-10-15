@@ -3,6 +3,9 @@ import './ImageGallery.css';
 import LikeIcon from '../assets/coracao.svg';
 import LikedIcon from '../assets/coracao-vermelho.svg';
 import CommentIcon from '../assets/chat.svg';
+import nature7 from '../assets/nature7.avif';
+import nature8 from '../assets/nature8.avif';
+import nature9 from '../assets/nature9.avif';
 import nature10 from '../assets/nature10.avif';
 import nature11 from '../assets/nature11.avif';
 import nature12 from '../assets/nature12.avif';
@@ -14,6 +17,9 @@ import nature17 from '../assets/nature17.avif';
 import nature18 from '../assets/nature18.avif';
 
 const images = [
+    { id: 1, src: nature7, alt: 'nature7' },
+    { id: 1, src: nature8, alt: 'nature8' },
+    { id: 1, src: nature9, alt: 'nature9' },
     { id: 1, src: nature10, alt: 'nature10' },
     { id: 2, src: nature11, alt: 'nature11' },
     { id: 3, src: nature12, alt: 'nature12' },
@@ -40,14 +46,12 @@ const ImageGallery = ({ isLoggedIn }) => {
         }));
     };
 
-    // Defina a função handleComment aqui
     const handleComment = (id) => {
         if (!isLoggedIn) {
             alert('Você precisa estar logado para comentar');
             return;
         }
 
-        // Aqui você pode adicionar a lógica para abrir o modal de comentário
         alert(`Comentar na imagem ${id}`);
     };
 
