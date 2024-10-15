@@ -18,22 +18,23 @@ import nature18 from '../assets/nature18.avif';
 
 const images = [
     { id: 1, src: nature7, alt: 'nature7' },
-    { id: 1, src: nature8, alt: 'nature8' },
-    { id: 1, src: nature9, alt: 'nature9' },
-    { id: 1, src: nature10, alt: 'nature10' },
-    { id: 2, src: nature11, alt: 'nature11' },
-    { id: 3, src: nature12, alt: 'nature12' },
-    { id: 4, src: nature13, alt: 'nature13' },
-    { id: 5, src: nature14, alt: 'nature14' },
-    { id: 6, src: nature15, alt: 'nature15' },
-    { id: 7, src: nature16, alt: 'nature16' },
-    { id: 8, src: nature17, alt: 'nature17' },
-    { id: 9, src: nature18, alt: 'nature18' }
+    { id: 2, src: nature8, alt: 'nature8' },
+    { id: 3, src: nature9, alt: 'nature9' },
+    { id: 4, src: nature10, alt: 'nature10' },
+    { id: 5, src: nature11, alt: 'nature11' },
+    { id: 6, src: nature12, alt: 'nature12' },
+    { id: 7, src: nature13, alt: 'nature13' },
+    { id: 8, src: nature14, alt: 'nature14' },
+    { id: 9, src: nature15, alt: 'nature15' },
+    { id: 10, src: nature16, alt: 'nature16' },
+    { id: 11, src: nature17, alt: 'nature17' },
+    { id: 12, src: nature18, alt: 'nature18' }
 ];
 
 const ImageGallery = ({ isLoggedIn }) => {
     const [likes, setLikes] = useState({});
-
+    const [selectedImage, setSelectedImage] = useState(null); 
+    
     const handleLike = (id) => {
         if (!isLoggedIn) {
             alert('Você precisa estar logado para curtir');
@@ -55,12 +56,19 @@ const ImageGallery = ({ isLoggedIn }) => {
         alert(`Comentar na imagem ${id}`);
     };
 
+    const openModal = (image) => {
+        setSelectedImage(image);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+    };
+
     return (
         <div className="gallery">
             {images.map((image) => (
                 <div key={image.id} className="image-container">
-                    <img src={image.src} alt={image.alt} />
-                    <div className="image-name">{image.name}</div>
+                    <img src={image.src} alt={image.alt} onClick={() => openModal(image)} />
 
                     <div className="actions">
                         <span
@@ -81,6 +89,19 @@ const ImageGallery = ({ isLoggedIn }) => {
                     </div>
                 </div>
             ))}
+
+            {/* Modal */}
+            {selectedImage && (
+                <div className="modal" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}> {/* Evita fechar ao clicar na imagem */}
+                        <span className="close" onClick={closeModal}>&times;</span>
+                        <img src={selectedImage.src} alt={selectedImage.alt} className="modal-image" />
+                        <div className="modal-details">
+                            <h2>{selectedImage.alt}</h2>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
