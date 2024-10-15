@@ -90,11 +90,11 @@ const ImageGallery = ({ isLoggedIn }) => {
                 </div>
             ))}
 
-            {/* Modal */}
+            
             {selectedImage && (
                 <div className="modal" onClick={closeModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}> {/* Evita fechar ao clicar na imagem */}
-                        <span className="close" onClick={closeModal}>&times;</span>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}> 
+                        
                         <img src={selectedImage.src} alt={selectedImage.alt} className="modal-image" />
                         <div className="modal-details">
                             <h2>{selectedImage.alt}</h2>
